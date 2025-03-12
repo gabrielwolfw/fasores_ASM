@@ -71,7 +71,7 @@ function [x_intersect, y_intersect, angle_VR, angle_VZL] = calculate_fasors(VS, 
 
     % Calculate angles
     angle_VR = atan2(y_intersect, x_intersect);
-    angle_VZL = atan2(y_intersect, x_intersect - VS);
+    angle_VZL = atan2(-y_intersect, VS - x_intersect);
 
     fprintf('Intersection point: (%.4f, %.4f)\n', x_intersect, y_intersect);
     fprintf('VR angle: %.4f degrees\n', rad2deg(angle_VR));
